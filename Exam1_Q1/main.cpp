@@ -54,16 +54,16 @@ int main() {
     changeRemaining = differenceChange - (wholeDollars * 100);
     
     // Calculate number of quarters, dimes, nickels, and pennies in change
-    amountQuarters = changeRemaining % 4;
+    amountQuarters = changeRemaining / 25;
     changeRemaining2 = changeRemaining - (amountQuarters * 25);
     
-    amountDimes = changeRemaining2 % 3;
+    amountDimes = changeRemaining2 / 10;
     changeRemaining3 = changeRemaining2 - (amountDimes * 10);
     
-    amountNickels = changeRemaining3 % 2;
+    amountNickels = changeRemaining3 / 5;
     changeRemaining4 = changeRemaining3 - (amountNickels * 5);
     
-    amountPennies = changeRemaining4 % 5; 
+    amountPennies = changeRemaining4; 
     
     // Output what amounts of what coins are due back to customer
     cout << "The change due to the customer is " << wholeDollars << " dollars, " << amountQuarters << " quarters, " << amountDimes << " dimes, " << amountNickels << " nickels, " << amountPennies << " pennies." << endl;
